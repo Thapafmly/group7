@@ -1,5 +1,5 @@
 import random, mysql.connector
-
+from geopy import distance
 
 connection = mysql.connector.connect(
     host='127.0.0.1',
@@ -90,25 +90,8 @@ def option1():
     return returnlist1
 
 
-###gives lat and long of of the airport chosen
-def selection1():
-    distance1 = returnlist1
-    sql = "select airport.latitude_deg, airport.longitude_deg from airport " \
-          "where airport.name = %s"
-    val = distance1
-    cursor = connection.cursor()
-    cursor.execute(sql, val)
-    result = cursor.fetchall()
-    length = []
-    for i in result:
-        i = (i[0], i[1])
-        print(i)
-    return length
-
-
 airport_selection1()
 option1()
-selection1()
 name = input("Enter name of the country where you want to fly: ")
 print("\nHere are the list of 3 random airport from the country you have chosen:")
 
@@ -153,7 +136,21 @@ def option2():
     return returnlist2
 
 
-###gives lat and long of of the airport chosen
+###calculate distance between two points
+def selection1():
+    distance1 = returnlist1
+    sql = "select airport.latitude_deg, airport.longitude_deg from airport " \
+          "where airport.name = %s"
+    val = distance1
+    cursor = connection.cursor()
+    cursor.execute(sql, val)
+    result = cursor.fetchall()
+
+    for i in result:
+        i = (i[0], i[1])
+    return i
+
+
 def selection2():
     distance2 = returnlist2
     sql = "select airport.latitude_deg, airport.longitude_deg from airport " \
@@ -165,10 +162,12 @@ def selection2():
 
     for i in result:
         i = (i[0], i[1])
-        print(i)
     return i
 
 
 airport_selection2()
 option2()
-selection2()
+
+
+distance = int(distance.distance(selection1(), selection2()).km)
+print(f"The distance between {returnlist1[0]} and {returnlist2[0]} is " + str(distance) + " km.")
