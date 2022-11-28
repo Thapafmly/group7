@@ -139,8 +139,8 @@ def option2():
 ###calculate distance between two points
 def selection1():
     distance1 = returnlist1
-    sql = "select airport.latitude_deg, airport.longitude_deg from airport " \
-          "where airport.name = %s"
+    sql = "select latitude_deg, longitude_deg from airport " \
+          "where name = %s"
     val = distance1
     cursor = connection.cursor()
     cursor.execute(sql, val)
@@ -153,8 +153,8 @@ def selection1():
 
 def selection2():
     distance2 = returnlist2
-    sql = "select airport.latitude_deg, airport.longitude_deg from airport " \
-          "where airport.name = %s"
+    sql = "select latitude_deg, longitude_deg from airport " \
+          "where name = %s"
     val = distance2
     cursor = connection.cursor()
     cursor.execute(sql, val)
