@@ -1,0 +1,84 @@
+#player-name{
+    padding-left: 1rem;
+}
+#score, #status{
+    text-align: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box table {
+  width: 100%;
+  text-align: left;
+  border: var(--grey) solid 1px;
+  border-radius: 4px;
+}
+.box1{
+    padding-top: 10rem;
+
+
+}
+
+#map,
+.box {
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  margin-bottom: 1rem;
+}
+
+.boxes {
+    width: 40%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+
+}
+
+#map {
+  width: 60%;
+  height: 83vh;
+  overflow: hidden;
+  left: 1rem;
+
+}
+
+form {
+    position: absolute;
+    right: 1rem;
+    z-index: 999;
+    padding: 1rem;
+    background-color: #ccc;
+    border: 1px solid #000;
+    width: 30rem;
+}
+
+#single {
+    top: 20rem;
+}
+
+#heading {
+    text-align: center;
+}
+
+.page-footer {
+  text-align: center;
+}
+input {
+    padding: .5rem;
+}
+
+select {
+    display: block;
+    padding: .5rem;
+    margin-bottom: .3rem;
+}
+
+
+.container {
+  width: 100%;
+  position: relative;
+}
+#player-name-input{
+    border: 0;
+}
