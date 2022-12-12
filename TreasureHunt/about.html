@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="game.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <header class="page-header">
+        <h1 class="page-title">Treasure Hunt</h1>
+        <nav>
+            <ul>
+                <a class="button" href="index.html">Game</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-wrap">
+        <div class="topic">
+            <header>
+                <h1>About the game</h1>
+            </header>
+        </div>
+        <article>
+            <figure class="float">
+                <img src="img/treasure.jpeg" style="float:left" alt="gameplay" width="600" height="550">
+            </figure>
+            <div class="paragraph">
+                <p>This game is about treasure hunting, where a player navigates to the target continents and countries
+                    followed by the airports and gathers the scores as a "treasure" along the way. First, the program
+                    prompts the user to enter his/her name, then the player selects the desired options from all the
+                    continents, countries, and one out of three airports of the corresponding country. After each
+                    navigation attempt, the player receives information on the number of remaining attempts,
+                    the total number of attempts (3), weather, and the score. The player gets the notification of
+                    weather condition of each arrival points. The weather information includes the temperature and
+                    feels like (temperature) in degree celsius, and humidity in g/m^3. The program fetches the weather
+                    data from API of https://openweathermap.org/api, maps data from the leaflet library,and data
+                    elements like continents, country, airport, municipality from flight_game database.</p>
+
+                <p>You would like to join Elon Musk's billionaire party, but you're very poor. BUT WAIT! Your
+                    grandfather wants to lend you his private jet. He's coming with you to collect golden treasures
+                    around the world. Your goal is to get rich by collecting points and to get into Elon's party.
+                </p>
+                <p>
+                    Our game is easier to understand! The goal is to find treasures
+                    across the world, and the player gets to decide where! You get 3 attempts to do so. First,
+                    you choose a continent and then after that a country. Then you can choose from 3 random airports
+                    to find the treasure. If you get lucky, you find the reward and claim 500 points! After that,
+                    the game ends and you see how many points you have collected so far.
+                </p>
+                <p>
+                    We hope, you'll have a great time playing our game, and have a good treasure-hunting time!
+                </p>
+            </div>
+        </article>
+
+    </main>
+    <footer class="page-footer">
+        <p>Enjoy The Game!</p>
+    </footer>
+</div>
+
+</body>
+
+</html>
